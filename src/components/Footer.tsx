@@ -1,3 +1,6 @@
+import {useContext} from "react";
+import {HeroNameContext} from "../utils/context.ts";
+
 const Footer = () => {
     return (
         <footer className={`h-24 bg-grey-color clear-both rounded-b-2xl grid grid-cols-8 items-center`}>
@@ -10,5 +13,3 @@ const Footer = () => {
 
 export default Footer;
 
-//"m-0"
-// "text-dark text-uppercase"

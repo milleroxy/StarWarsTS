@@ -3,6 +3,11 @@ export interface SWContextValue {
     changePage: (page: string) => void,
 }
 
+export interface HeroNameContextType {
+    heroName: string;
+    setHeroName: (name: string) => void;
+}
+
 export interface HeroInfo {
     name: string,
     gender: string,
@@ -12,4 +17,25 @@ export interface HeroInfo {
     hair_color: string,
     skin_color: string,
     eye_color: string
+}
+
+export interface Item {
+    title: string,
+    path: string
+}
+
+export interface Hero {
+    name: string,
+    img: string | object,
+    url: string
+}
+
+export interface Characters {
+    [key: string]: Hero;
+}
+
+
+export interface HeroNameContextType {
+    heroName: string;
+    setHeroName: (name: string) => void;
 }
