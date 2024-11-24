@@ -41,8 +41,9 @@ const AboutMe = () => {
                     }));
                 })
         }
-
-    }, [heroID, setHeroName])
+        return() =>
+            setHeroName(characters[defaultHero].name)
+    }, [])
 
     return (
         <>
