@@ -3,13 +3,8 @@ import AboutMe from "./AboutMe.tsx";
 import StarWars from "./StarWars.tsx";
 import Contact from "./Contact.tsx";
 import {navItems} from "../utils/constants.ts";
-import {useContext, useState} from "react";
-import {HeroNameContext, SWContext} from "../utils/context.ts";
 import {Route, Routes} from "react-router-dom";
 import ErrorPage from "./ErrorPage.tsx";
-import aboutMe from "./AboutMe.tsx";
-import Header from "./Header.tsx";
-
 
 const Main = () => {
 return (

@@ -10,11 +10,13 @@ function App() {
     const [heroName, setHeroName] = useState('Star Wars');
 
     return (
+        <div>
         <HeroNameContext.Provider value={{heroName, setHeroName }}>
             <Header/>
             <Main/>
-            <Footer/>
         </HeroNameContext.Provider>
+        <Footer/>
+        </div>
     )
 }
 

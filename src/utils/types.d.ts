@@ -34,8 +34,3 @@ export interface Characters {
     [key: string]: Hero;
 }
 
-
-export interface HeroNameContextType {
-    heroName: string;
-    setHeroName: (name: string) => void;
-}
