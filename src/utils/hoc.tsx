@@ -4,11 +4,9 @@ import {ComponentType, useContext, useEffect} from "react";
 import {SWContext} from "./context.ts";
 import ErrorPage from "../components/ErrorPage.tsx";
 
-interface Props {
-    heroId: string
-}
+//Дженерик т.к. типизация отложенного типа. мы не знаем какой будет тип
 
-export const herroWrapper = (WrappedComponent: ComponentType<Props>) => (props: object) => {
+export const herroWrapper = <T extends object>(Component: ComponentType<T>) => (props: T) => {
     const {heroId = defaultHero} = useParams();
     const {changeHero} = useContext(SWContext);
 
@@ -19,7 +17,7 @@ export const herroWrapper = (WrappedComponent: ComponentType<Props>) => (props: 
         changeHero(heroId);
     }, [heroId])
     return characters[heroId] ? (
-        <WrappedComponent {...props} heroId={heroId} />
+        <Component heroId={heroId} {...props}/>
     ) :<ErrorPage/>
 }
 
