@@ -1,10 +1,14 @@
 import {characters, defaultHero} from "./constants.ts";
 import {useParams} from "react-router-dom";
-import {useContext, useEffect} from "react";
+import {ComponentType, useContext, useEffect} from "react";
 import {SWContext} from "./context.ts";
 import ErrorPage from "../components/ErrorPage.tsx";
 
-export const herroWrapper =WrappedComponent => props => {
+interface Props {
+    heroId: string
+}
+
+export const herroWrapper = (WrappedComponent: ComponentType<Props>) => (props: object) => {
     const {heroId = defaultHero} = useParams();
     const {changeHero} = useContext(SWContext);
 

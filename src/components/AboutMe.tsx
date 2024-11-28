@@ -3,6 +3,10 @@ import {characters, defaultHero, period_month} from "../utils/constants.ts";
 import {HeroInfo} from "../utils/types";
 import {herroWrapper} from "../utils/hoc.tsx";
 
+interface Props {
+    heroId: string
+}
+
 const AboutMe = ({heroId}) => {
     const [hero, setHero] = useState<HeroInfo>();
 
