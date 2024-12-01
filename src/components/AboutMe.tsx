@@ -7,7 +7,7 @@ interface Props {
     heroId: string
 }
 
-const AboutMe = ({heroId}) => {
+const AboutMe = ({heroId}: Props) => {
     const [hero, setHero] = useState<HeroInfo>();
 
 

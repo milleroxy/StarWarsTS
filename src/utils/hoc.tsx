@@ -17,7 +17,7 @@ export const herroWrapper = <T extends object>(Component: ComponentType<T>) => (
         changeHero(heroId);
     }, [heroId])
     return characters[heroId] ? (
-        <Component heroId={heroId} {...props}/>
+        <Component {...props} heroId={heroId} />
     ) :<ErrorPage/>
 }
 
